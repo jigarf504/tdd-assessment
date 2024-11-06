@@ -2,7 +2,7 @@ const add = (numbers) => {
   if (!numbers) {
     return 0;
   }
-  const regX = /[,\n]/;
+  const regX = /\/\/|[,\n;]/;
   let numberArr = numbers.split(regX);
   if (numberArr.length === 1) {
     const [num] = numberArr;
