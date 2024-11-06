@@ -7,8 +7,11 @@ const add = (numbers) => {
   if (numberArr.length === 1) {
     const [num] = numberArr;
     return +num;
-  } 
+  }
 
+  numberArr = numberArr.filter((n) => n > 0).map((n) => +n);
+  const sum = numberArr.reduce((sum, item) => sum + item, 0);
+  return sum;
 };
 
 export default add;
